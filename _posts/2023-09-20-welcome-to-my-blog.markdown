@@ -25,7 +25,7 @@ HUBC is a publicly traded company on the Pakistan Stock Exchange. If you had inv
 * Share Value Increase: +27%
 * Total Return: 73%
 
-This easily outperforms inflation and lets you earn some extra money.
+So, let's imagine you had PKR 1 million in September 2022. With this amount, buying property or a car might not be an option. So, you decide to invest in HUBC instead. Within just one year, you would have received PKR 460,000 in dividends directly deposited into your bank account, hassle-free. Plus, your initial investment would have grown to PKR 1.27 million. That's undeniably a fantastic investment by any measure.
 
 ### Example 2: United Bank Limited (UBL)
 
