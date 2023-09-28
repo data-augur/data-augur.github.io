@@ -1,0 +1,92 @@
+---
+layout: art
+---
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sol LeWitt Reproduction</title>
+        <style>
+            body{
+                margin:0;
+                overflow: hidden;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+    <script>
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("width", width)
+        svg.setAttribute("height", height)
+        document.body.appendChild(svg)
+
+        let mask = document.createElementNS("http://www.w3.org/2000/svg","mask");
+        mask.setAttribute("id", 'my-mask')
+        svg.appendChild(mask)
+
+
+        let circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
+        circle.setAttribute("cx", width/2)
+        circle.setAttribute("cy", height/2)
+        circle.setAttribute('r',300)
+        circle.setAttribute('fill', 'white')
+        mask.appendChild(circle)
+
+        let mask1 = document.createElementNS("http://www.w3.org/2000/svg","mask");
+        mask1.setAttribute("id", 'my-mask1')
+       
+        svg.appendChild(mask1)
+
+        let rect =  document.createElementNS("http://www.w3.org/2000/svg","rect");
+        rect.setAttribute("width",width)
+        rect.setAttribute("height", height)
+        rect.setAttribute("fill",'white')
+        mask1.appendChild(rect)
+        
+
+
+
+        let circle1 = document.createElementNS("http://www.w3.org/2000/svg","circle");
+        circle1.setAttribute("cx", width/2)
+        circle1.setAttribute("cy", height/2)
+        circle1.setAttribute('r',300)
+        circle1.setAttribute('fill', 'black')
+        mask1.appendChild(circle1)
+
+        
+
+        let x = 0;
+        for(let i =0;i < width/30; i ++)
+        {
+            let rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
+            rect.setAttribute("width", 15)
+            rect.setAttribute("height", height)
+            rect.setAttribute("x", x)
+            rect.setAttribute('mask','url(#my-mask1)')
+            svg.appendChild(rect)
+            x= x+ 30;
+        }
+
+
+
+        let y = 0;
+        let from = "0 " + width/2 +" "+ height/2
+        let to = "360 " + width/2 +" "+ height/2
+        for(let i =0;i < height/30; i ++)
+        {
+            let rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
+            rect.setAttribute("width", width)
+            rect.setAttribute("height", 15)
+            rect.setAttribute("y", y)
+            rect.setAttribute('mask','url(#my-mask)')
+             svg.appendChild(rect)
+            y= y + 30;
+        }
+
+        
+    </script>
+</body>
+</html>
